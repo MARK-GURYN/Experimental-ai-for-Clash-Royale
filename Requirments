@@ -1,0 +1,10 @@
+Requirements (needed for download)
+
+ultralytics
+torch
+torchvision
+torchaudio
+numpy
+opencv-python
+PyYAML
+mss
