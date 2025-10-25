@@ -1,0 +1,46 @@
+#configuration
+
+screen:
+  width: 720
+  height: 1280
+  top_play_y: 450
+
+buttons:
+  ok_button: [360, 1100]
+  play_again: [360, 1100]
+
+cards:
+  slots:
+    - [100, 1180]
+    - [210, 1180]
+    - [320, 1180]
+    - [430, 1180]
+    - [540, 1180]
+    - [650, 1180]
+    - [760, 1180]
+    - [870, 1180]
+
+model:
+  yolov8_path: yolov8n.pt
+
+rl:
+  action_grid_w: 8
+  action_grid_h: 4
+  gamma: 0.99
+  lr: 0.0005
+  batch_size: 64
+  buffer_size: 50000
+  epsilon_start: 1.0
+  epsilon_end: 0.1
+  epsilon_decay_steps: 60000
+  target_update_every: 1500
+
+episode:
+  max_seconds: 420
+  screenshot_rate_hz: 1
+
+reward:
+  enemy_tower_weight: 2.0
+  our_tower_weight: -2.5
+  win_bonus: 10.0
+  loss_penalty: -12.0
